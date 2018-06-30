@@ -1,6 +1,6 @@
 {
-  "name": "api-aula-extra-react",
-  "version": "0.0.0",
+  "name": "pokemon-api-for-tests",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"

@@ -6,7 +6,7 @@ This api will be used for CWI Crescer in front-end tests.
 * Clone this project.
 * Run `npm install`
 * Run `npm start`
-* The service is listening on port `3000`
+* The service is listening on port `3001`
 
 ## Endpoints
 

@@ -46,9 +46,14 @@ function requiredLoggedMiddleware(req, res, next) {
   next();
 }
 
+/**
+ * Here is were we store the users in runtime.
+ * If you want to add new fixed user, 
+ * just add new item to this array.
+ */
 let users = [
   {
-    email: 'ben-hur@cwi.com.br',
+    email: 'ben-hur@outlook.com',
     password: '1234',
     token: 'e229d68a-11af-0aa9-3633-13ba0563144f'
   }
@@ -60,6 +65,9 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+/**
+ * Create a new account.
+ */
 app.post('/account', function (req, res, next) {
   var model = {
     email: req.body.email,
@@ -86,6 +94,9 @@ app.post('/account', function (req, res, next) {
   res.status(201).send({ email: model.email });
 })
 
+/**
+ * Login to an account
+ */
 app.post('/login', function (req, res, next) {
   var model = {
     email: req.body.email,
@@ -115,6 +126,9 @@ app.post('/login', function (req, res, next) {
   });
 })
 
+/**
+ * Get a pokemon by it's id.
+ */
 app.get('/pokemon/:id', requiredLoggedMiddleware, function (req, res, next) {
   var id = req.params.id;
 
@@ -133,6 +147,9 @@ app.get('/pokemon/:id', requiredLoggedMiddleware, function (req, res, next) {
   res.status(200).send(pokemon);
 })
 
+/**
+ * Get a pokemon image by it's id.
+ */
 app.get('/pokemon/:id/image', requiredLoggedMiddleware, function (req, res, next) {
   var id = req.params.id;
 

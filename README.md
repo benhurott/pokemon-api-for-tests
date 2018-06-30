@@ -45,6 +45,21 @@ Results:
 | 401 | email or password invalid | json with the error message.
 | 403 | some param is invalid | json with the error message.
 
+### [POST] /logout
+Logout a account.
+
+Headers:
+
+| header | is required | value you must provide |
+| ------ | ----------- | ---------------------- |
+| Authorization | yes | the `token` provided by `/login` endpoint |
+
+Results:
+
+| code | what happened? | result data |
+| ---- | -------------- | ----------- |
+| 200 | you are now logged | json with logout status.
+
 ### [GET] /pokemon/{id}
 Get a pokemon data by it's id.
 

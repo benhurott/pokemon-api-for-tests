@@ -14,12 +14,14 @@ This api will be used for CWI Crescer in front-end tests.
 Create a new account.
 
 Body (JSON):
-| param | type | is required | notes |
-| ----- | ---- | ----------- | ----- |
-| email | string | yes | the e-mail used for login.
-| password | string | yes (minimum 4 chars) | the password for login.
+
+| param    | type   | is required           | notes                      |
+| -------- | ------ | --------------------- | -------------------------- |
+| email    | string | yes                   | the e-mail used for login. |
+| password | string | yes (minimum 4 chars) | the password for login.    |
 
 Results:
+
 | code | what happened? | result data |
 | ---- | -------------- | ----------- |
 | 201 | account created successfully | json with email vinculated to account.
@@ -29,12 +31,14 @@ Results:
 Login with an account.
 
 Body (JSON):
+
 | param | type | is required | notes |
 | ----- | ---- | ----------- | ----- |
 | email | string | yes | the e-mail used for login.
 | password | string | yes | the password for login.
 
 Results:
+
 | code | what happened? | result data |
 | ---- | -------------- | ----------- |
 | 200 | you are now logged | json with token for authentication header.
@@ -45,16 +49,19 @@ Results:
 Get a pokemon data by it's id.
 
 Headers:
+
 | header | is required | value you must provide |
 | ------ | ----------- | ---------------------- |
 | Authorization | yes | the `token` provided by `/login` endpoint |
 
 Url Params:
+
 | param | is required | value you must provide |
 | ----- | ----------- | ---------------------- |
 | {id} | yes | the `id` of a registered pokemon |
 
 Results:
+
 | code | what happened? | result data |
 | ---- | -------------- | ----------- |
 | 200 | the pokemon was found | json with pokemon data.
@@ -66,16 +73,19 @@ Results:
 Get a pokemon image by it's id.
 
 Headers:
+
 | header | is required | value you must provide |
 | ------ | ----------- | ---------------------- |
 | Authorization | yes | the `token` provided by `/login` endpoint |
 
 Url Params:
+
 | param | is required | value you must provide |
 | ----- | ----------- | ---------------------- |
 | {id} | yes | the `id` of a registered pokemon |
 
 Results:
+
 | code | what happened? | result data |
 | ---- | -------------- | ----------- |
 | 200 | the pokemon was found | json with pokemon data.

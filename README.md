@@ -1,6 +1,6 @@
 # Api
 
-This api will be used for CWI Crescer in front-end tests.
+This is a simple api in express for front-end tests. Enjoy =).
 
 ## Setup
 * Clone this project.
